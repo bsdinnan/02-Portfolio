@@ -1,0 +1,49 @@
+:root {
+    
+}
+
+* {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#header {
+    display: flex;
+    justify-content:space-around
+}
+
+h2 {
+    min-width: 15%;
+    margin: 15px 5px 15px 40px;
+    border-right: 5px black;
+}
+
+nav {
+min-width: 35%;
+}
+
+#navigation {
+    display: flex;
+    justify-content: space-between;
+}
+
+ul li {
+display: inline-block;
+margin: 10px 5px
+}
+
+div img {
+    display: inline-block;
+    min-width: 100%;
+    height: 300px;
+}
+
+#aboutMe {
+    display: flex;
+}
+
+p {
+    margin: 10px 40px 10px 5px;
+    padding-left: 10px;
+    border-left: 3px solid black;
+    min-width: 75%;
+}
