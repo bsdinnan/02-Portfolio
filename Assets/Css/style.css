@@ -1,19 +1,27 @@
+/*base formatting*/
 :root {
-    
+    --darkGreen: #514B23;
+    --darkMoss: #656839;
+    --sageGreen: #CBC9AD;
+    --ashGray: #CBD0B9;
 }
 
 * {
     font-family: Arial, Helvetica, sans-serif;
+    list-style-type: none;
 }
+
+body {
+    background-color: var(--darkGreen);
+}
+
+/*header and navigation formatting*/
 
 #header {
     display: flex;
-    justify-content:space-around
-}
-
-h2 {
-    min-width: 15%;
-    margin: 15px 5px 15px 40px;
+    justify-content:space-around;
+    background-color: var(--darkGreen);
+    color: var(--ashGray);
 }
 
 nav {
@@ -25,6 +33,17 @@ nav {
     justify-content: space-between;
 }
 
+a {
+    color: var(--ashGray);
+    text-decoration: none;
+}
+
+#aboutMe
+
+#work
+
+#contactMe
+
 li {
     display: inline-block;
     margin: 10px 5px
@@ -33,26 +52,47 @@ li {
 div img {
     display: inline-block;
     min-width: 100%;
-    height: 300px;
+    height: 200px;
+    background: var(--darkMoss);
+    border-top: white 4px solid;
+    border-bottom: white 4px solid;
 }
+
+/*formatting for image between header and main content*/
+
+h2 {
+    min-width: 15%;
+    margin: 15px 5px 15px 40px;
+}
+
+/*formatting for main content*/
 
 .section {
     display: flex;
+    background-color: var(--darkMoss);
+    color: var(--ashGray);
 }
 
 p {
     margin: 10px 40px 10px 5px;
     padding-left: 10px;
-    border-left: 3px solid black;
+    border-left: 3px solid white;
     min-width: 75%;
+    color: var(--sageGreen);
 }
+
+section img:hover {
+border: var(--darkGreen) 1px solid;
+}
+
+/*formatting for images*/
 
 #images {
     display: flex;
     flex-wrap: wrap;
     margin: 10px 40px 10px 5px;
     min-width: 75%;
-    border-left: 3px solid black;
+    border-left: 3px solid white;
     padding: 1% 5%;
 }
 
@@ -60,17 +100,73 @@ p {
     display: inline-block;
     margin: 10px 12px;
     border: 3px solid black;
+    border: var(--ashGray) 5px solid;
 }
 
 #card1 {
     display: inline-block;
     margin: 10px;
     border: 3px solid black;
+    border: var(--ashGray) 5px solid;
 }
+
+#card1:hover {
+    border: var(--darkGreen) 1px solid;
+}
+
+/*formtting for footer*/
+
+ footer section {
+    border-left: 3px solid white;
+    margin: 10px 40px 10px 5px;
+ }
+
+ .footer {
+    background-color: var(--darkGreen);
+ }
+
  #contact {
     display: flex;
+    justify-content: space-between;
  }
- footer section {
-    border-left: 3px solid black;
-    margin: 10px 40px 10px 5px;
+
+/*formatting to allow for a responsive layout*/
+
+ @media screen and (max-width: 450px) {
+
+    #header {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #navigation {
+        flex-direction: column;
+        text-size-adjust: 15px;
+        align-items: center;
+    }
+
+    .section {
+        flex-direction: column;
+        align-items: center;
+        min-width: 100%;
+    }
+
+    p {
+        align-items: center;
+    }
+
+    #images {
+        flex-direction: column;
+        align-items: center;
+        min-width: 100%;
+    }
+
+    .card {
+        max-width: 100%;
+    }
+
+    #card1 {
+        max-width: 100%;
+    }
+
  }
